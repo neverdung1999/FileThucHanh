@@ -1,10 +1,12 @@
 ﻿@model  BigSchool.ViewModels.CoursesViewModel
-    @{ 
-
-    ViewBag.Title = "Home Page";
+@{
+    ViewBag.Title = "Attending";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="row">
+<h2>Attending</h2>
+
+<div class="course">
     <ul>
         @foreach (var course in Model.UpcommingCourses)
         {
@@ -36,9 +38,9 @@
             </li>
         }
     </ul>
-   @section scripts
+    @section scripts
     {
-    <script>
+        <script>
         $(document).ready(function () {
             $(".js-toggle-attendance").click(function (e) {
                 var button = $(e.target);
@@ -64,6 +66,6 @@
                 });
             });
         });
-    </script>
-}
+        </script>
+    }
 </div>
