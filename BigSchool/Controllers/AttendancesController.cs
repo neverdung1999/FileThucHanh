@@ -21,6 +21,7 @@ namespace BigSchool.Controllers
 
         [HttpPost]
         public IHttpActionResult Attend([FromBody]int courseID)
+
         {
             var attendance = new Attendance
             {
